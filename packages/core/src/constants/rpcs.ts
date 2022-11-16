@@ -5,6 +5,7 @@ export type RpcProviderName = 'alchemy' | 'infura' | 'public'
 type AlchemyChains = Extract<
   ChainName,
   | 'mainnet'
+  | 'ethereumpow'
   | 'goerli'
   | 'optimism'
   | 'optimismGoerli'
@@ -15,6 +16,7 @@ type AlchemyChains = Extract<
 >
 export const alchemyRpcUrls: Record<AlchemyChains, string> = {
   mainnet: 'https://eth-mainnet.alchemyapi.io/v2',
+  ethereumpow: 'https://ethw-dataseed1.ethereumpow.org',
   goerli: 'https://eth-goerli.alchemyapi.io/v2',
   optimism: 'https://opt-mainnet.g.alchemy.com/v2',
   optimismGoerli: 'https://opt-goerli.g.alchemy.com/v2',
@@ -27,6 +29,7 @@ export const alchemyRpcUrls: Record<AlchemyChains, string> = {
 type InfuraChains = Extract<
   ChainName,
   | 'mainnet'
+  | 'ethereumpow'
   | 'goerli'
   | 'sepolia'
   | 'optimism'
@@ -38,6 +41,7 @@ type InfuraChains = Extract<
 >
 export const infuraRpcUrls: Record<InfuraChains, string> = {
   mainnet: 'https://mainnet.infura.io/v3',
+  ethereumpow: 'https://ethw-dataseed1.ethereumpow.org',
   goerli: 'https://goerli.infura.io/v3',
   sepolia: 'https://sepolia.infura.io/v3',
   optimism: 'https://optimism-mainnet.infura.io/v3',
@@ -51,6 +55,7 @@ export const infuraRpcUrls: Record<InfuraChains, string> = {
 type PublicChains = Extract<
   ChainName,
   | 'mainnet'
+  | 'ethereumpow'
   | 'goerli'
   | 'sepolia'
   | 'optimism'
@@ -62,6 +67,7 @@ type PublicChains = Extract<
 >
 export const publicRpcUrls: Record<PublicChains, string> = {
   mainnet: 'https://cloudflare-eth.com',
+  ethereumpow: 'https://ethw-dataseed1.ethereumpow.org',
   goerli: 'https://rpc.ankr.com/eth_goerli',
   sepolia: 'https://rpc.sepolia.org',
   optimism: 'https://mainnet.optimism.io',

@@ -4,6 +4,7 @@ import { alchemyRpcUrls, infuraRpcUrls, publicRpcUrls } from './rpcs'
 
 export const chainId = {
   mainnet: 1,
+  ethereumpow: 10001,
   goerli: 5,
   sepolia: 11_155_111,
   optimism: 10,
@@ -41,6 +42,27 @@ export const mainnet: Chain = {
     blockCreated: 14353601,
   },
 }
+
+export const ethereumpow: Chain = {
+  id: chainId.ethereumpow,
+  name: 'ETHW-mainnet',
+  network: 'homestead',
+  nativeCurrency: { name: 'EtherPoW', symbol: 'ETHW', decimals: 18 },
+  rpcUrls: {
+    default: publicRpcUrls.ethereumpow,
+    infura: infuraRpcUrls.ethereumpow,
+    public: publicRpcUrls.ethereumpow,
+  },
+  blockExplorers: {
+    etherscan: etherscanBlockExplorers.ethereumpow,
+    default: etherscanBlockExplorers.ethereumpow,
+  },
+  multicall: {
+    address: '0xca11bde05977b3631167028862be2a173976ca11',
+    blockCreated: 14353601,
+  },
+}
+
 
 export const goerli: Chain = {
   id: chainId.goerli,

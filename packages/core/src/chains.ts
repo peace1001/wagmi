@@ -11,4 +11,5 @@ export {
   optimismGoerli,
   polygon,
   polygonMumbai,
+  ethereumpow
 } from './constants/chains'
